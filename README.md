@@ -1,4 +1,4 @@
-# Sentiment-Analysis-Capstone
+# Sentiment Analysis BrainStation Capstone
 Predicting the sentiment (positive or negative) of a product review using machine learning tools
 
 README
