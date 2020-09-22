@@ -50,12 +50,12 @@ def train_test_split(X,y):
     from sklearn.model_selection import train_test_split
 
     # Taking a chuck for our 25% test set
-    X_remainder, X_test, y_remainder, y_test = train_test_split(X, y, stratify=y, test_size=0.25)
+    X_remainder, X_test, y_remainder, y_test = train_test_split(X, y, stratify=y, test_size=0.25, random_state=42)
 
     # Splitting the remainder in two chunks
     X_train, X_validation, y_train, y_validation = train_test_split(X_remainder, 
                                                                     y_remainder, 
-                                                                    stratify=y_remainder, test_size=0.25)
+                                                                    stratify=y_remainder, test_size=0.25, random_state=42)
     from sklearn.feature_extraction.text import CountVectorizer 
     bagofwords = CountVectorizer(tokenizer=my_tokenizer)
     bagofwords.fit(X_train)
