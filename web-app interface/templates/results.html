@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Review Classification</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+
+<h3>Your product review:</h3>
+<div>{{ content }}</div>
+
+<h3>Prediction:</h3>
+<div>This product review is <strong>{{ prediction }}</strong>
+	 (confident: {{ probability }}%).</div>
+
+<br></br>
+
+<div id='button'>
+	  <form action="/">
+	    <input type=submit value='Submit another review'>
+	  </form>
+</div>
+
+  </body>
+</html>
